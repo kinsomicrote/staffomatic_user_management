@@ -115,3 +115,42 @@ $ curl --header \
         --header "Content-Type: application/json" \
         http://localhost:3189/users
 ```
+
+##### (GET /users?archived=true)
+
+```bash
+$ curl --header \
+        "Authentication: Bearer JWT_TOKEN" \
+        --header "Content-Type: application/json" \
+        http://localhost:3189/users?archived=true
+```
+
+##### (GET /users?archived=false)
+
+```bash
+$ curl --header \
+        "Authentication: Bearer JWT_TOKEN" \
+        --header "Content-Type: application/json" \
+        http://localhost:3189/users?archived=false
+```
+
+
+### Archive User
+#### (PATCH /archives/:id)
+
+```bash
+$ curl --request PATCH --header \
+        "Authentication: Bearer JWT_TOKEN" \
+        --header "Content-Type: application/json" \
+        http://localhost:3189/archives/1
+```
+
+### User Archive History
+#### (GET /archives/:id/history)
+
+```bash
+$ curl --header \
+        "Authentication: Bearer JWT_TOKEN" \
+        --header "Content-Type: application/json" \
+        http://localhost:3189/archives/1/history
+```
