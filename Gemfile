@@ -22,11 +22,28 @@ gem 'jwt'
 # seriaization & json_api logic
 gem 'jsonapi.rb'
 
+# audit
+gem 'paper_trail', '~> 12.0'
+
+# background job
+gem 'sidekiq', '~> 6.2', '>= 6.2.1'
+
+# email
+gem 'sendgrid-ruby', '~> 6.4'
+
+gem 'rswag-api', '~> 2.4'
+gem 'rswag-ui', '~> 2.4'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0.2'
+
+  gem 'dotenv-rails'
+  gem 'rswag-specs', '~> 2.4'
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'ffaker', '~> 2.18'
 end
 
 group :development do
